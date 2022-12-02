@@ -12,7 +12,7 @@ Locustの特徴は何といってもPythonで書けることです。
 - Python 3.7.9
 
 > **Note**  
-> Pythonをインストールされていない方は，以下のページよりインストールしてください．
+> Pythonをインストールされていない方は，以下のページよりインストールしてください．  
 > [Pythonダウンロードはコチラから](https://pythonlinks.python.jp/ja/index.html)
 
 
@@ -80,11 +80,11 @@ $ deactivate
 
 
 
-## GUIについて説明
-Chats タブ：　どのくらいの秒間リクエストでているのか等をグラフで見れます
-Failures: リクエスト失敗した場合は簡単な例外内容含めて出してくれます
-Exceptions: 例外のStackTrace
-Download Data: CSVとして結果のデータをダウンロードできます。
-Slaves: LocustのSlaveの状態を見れます。
+## GUIについて説明  
+Chats タブ：　どのくらいの秒間リクエストでているのか等をグラフで見れます  
+Failures: リクエスト失敗した場合は簡単な例外内容含めて出してくれます  
+Exceptions: 例外のStackTrace  
+Download Data: CSVとして結果のデータをダウンロードできます  
+Slaves: LocustのSlaveの状態を見れます  
 
 
