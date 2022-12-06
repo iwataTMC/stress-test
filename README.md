@@ -15,6 +15,10 @@ Locustの特徴は何といってもPythonで書けることです。
 > Pythonをインストールされていない方は，以下のページよりインストールしてください．  
 > [Pythonダウンロードはコチラから](https://pythonlinks.python.jp/ja/index.html)
 
+### サポートされているpythonのバージョン
+- 3.6
+- 3.7
+- 3.8
 
 
 # 使い方
@@ -33,13 +37,14 @@ $ python3.7 -m venv test
 $ source test/bin/activate
 ```
 
-3. Locustをインストールします．
+## Locustのインストール
+1. Locustをインストールします．
 
 ```
 $ pip install locust
 ```
 
-4. インストールできたか確認します．
+2. インストールできたか確認します．
 
 locustコマンドが使えればOKです．
 
@@ -49,13 +54,13 @@ $ pip list
 $ locust -V
 ```
 
-1. ターミナルで以下のコマンドを実行します．
+3. ターミナルで以下のコマンドを実行します．
 
 ```
 $ locust
 ```
 
-6. ブラウザで以下のURLにアクセスします．
+4. ブラウザで以下のURLにアクセスします．
 
 ```
 http://localhost:8089/
@@ -63,7 +68,7 @@ http://localhost:8089/
 
 GUIで負荷テストを行うことができます．
 
-7. GUIで負荷テストを行う
+5. GUIで負荷テストを行う
 
 - Number of users to simulate: 最終的に到達するユーザ数(=クライアント数)
 - Hatch rate: 1秒あたりに増加する秒間ユーザ数
@@ -91,3 +96,7 @@ Download Data: CSVとして結果のデータをダウンロードできます
 Slaves: LocustのSlaveの状態を見れます  
 
 
+
+
+# 参考
+- [pythonで始める負荷試験](https://speakerdeck.com/nissy0409240/pythondeshi-merufu-he-shi-yan)
