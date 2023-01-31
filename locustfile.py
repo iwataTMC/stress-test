@@ -4,7 +4,7 @@ class UserBehavior(TaskSet):
 
     @task(1)
     def search(self):
-        self.client.get("/api/t******-bo***", verify=False)
+        self.client.get("/", verify=False)
 
 class WebsiteUser(HttpUser):
 
