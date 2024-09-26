@@ -57,7 +57,7 @@ pythonの仮想環境とは，pythonのライブラリをプロジェクトご�
 $ python3.7 -m venv test
 ```
 
-> **Note**  
+> [!NOTE]  
 > `python3.7`は，pythonのバージョンによって変更してください．
 > `test` は仮想環境の名前です．任意の名前をつけることができます．
 
