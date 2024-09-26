@@ -177,3 +177,15 @@ Slaves: LocustのSlaveの状態を見れます
 
 # 参考
 - [pythonで始める負荷試験](https://speakerdeck.com/nissy0409240/pythondeshi-merufu-he-shi-yan)
+
+# Appendix
+
+- `locustfile` の自動生成
+  [har2locust](https://github.com/SvenskaSpel/har2locust) を使用すると、ブラウザ記録 (HAR ファイル) に基づいて
+  `locustfile` を生成できます。
+  - これは、独自の `locustfile` の作成に慣れていない初心者にとって特に便利ですが、より高度な使用例に合わせて高度にカスタマイズすることもできます。
+    - 以下のコマンドを実行することで、`locustfile.py` が生成されます。
+    ```
+    $ pip install har2locust
+    $ har2locust myrecording.har > locustfile.py
+    ```
