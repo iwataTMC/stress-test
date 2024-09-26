@@ -11,7 +11,7 @@ Locustの特徴は何といってもPythonで書けることです。
 - MacOS
 - Python 3.7.9
 
-> **Note**  
+> [!NOTE]  
 > Pythonをインストールされていない方は，以下のページよりインストールしてください．  
 > [Pythonダウンロードはコチラから](https://pythonlinks.python.jp/ja/index.html)
 
