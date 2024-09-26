@@ -163,15 +163,14 @@ Ctrl + C
 $ deactivate
 ```
 
+## GUIについての説明
 
-
-## GUIについて説明  
 Chats タブ： どのくらいの秒間リクエストでているのか等をグラフで見れます  
 Failures: リクエスト失敗した場合は簡単な例外内容含めて出してくれます  
 Exceptions: 例外のStackTrace  
 Download Data: CSVとして結果のデータをダウンロードできます  
 Slaves: LocustのSlaveの状態を見れます  
-
+RPS: Requests Per Secondの略で、1秒間にどれだけのHTTPリクエストが処理されているかを示す指標です(スループット)
 
 
 
