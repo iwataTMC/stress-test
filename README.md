@@ -86,13 +86,48 @@ $ pip list
 $ locust -V
 ```
 
-3. ターミナルで以下のコマンドを実行します．
+3. `locustfile.py`を編集しシナリオを書きます．  
+
+(例1)`/helloworld`にGETリクエストを送るシナリオ
+
+```python
+from locust import HttpUser, task, between
+
+class QuickstartUser(HttpUser):
+    #  1タスク = 1秒間に1回リクエストを送信する
+    wait_time = constant_pacing(1)
+    
+    @task
+    def hello_world(self):
+        self.client.get("/helloworld")
+```
+
+(例2)Basic認証(ユーザ名とパスワード)が必要な場合は以下のように書きます．
+
+```python
+from locust import HttpUser, task, constant_pacing
+from requests.auth import HTTPBasicAuth
+
+class QuickstartUser(HttpUser):
+    #  1タスク = 1秒間に1回リクエストを送信する
+    wait_time = constant_pacing(1)
+
+    @task
+    def view_top(self):
+        # Basic認証を通過するため、以下を記述する
+        auth = HTTPBasicAuth(username="username", password="password")
+        self.client.get("/hello-world", auth=auth)
+```
+
+
+
+4. ターミナルで以下のコマンドを実行します．
 
 ```
 $ locust
 ```
 
-4. ブラウザで以下のURLにアクセスします．
+5. ブラウザで以下のURLにアクセスします．
 
 ```
 http://localhost:8089/
@@ -100,7 +135,7 @@ http://localhost:8089/
 
 GUIで負荷テストを行うことができます．
 
-5. GUIで負荷テストを行う
+6. GUIで負荷テストを行う
 
 - Number of users to simulate: 最終的に到達するユーザ数(=クライアント数)
 - Hatch rate: 1秒あたりに増加する秒間ユーザ数
@@ -108,6 +143,15 @@ GUIで負荷テストを行うことができます．
 - URL: 検証したいURLを入力します
 
 上の設定をしたら「Start swarming」を押下すると，負荷テストが開始されます．
+
+7. テスト結果の確認
+
+8. locustを終了する
+```
+Ctrl + C
+```
+
+
 
 
 ## 仮想環境の終了
