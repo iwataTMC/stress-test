@@ -1,13 +1,8 @@
-from locust import HttpUser, TaskSet, task, between, constant
+from locust import HttpUser, task
 
-class UserBehavior(TaskSet):
 
-    @task(1)
-    def search(self):
-        self.client.get("/", verify=False)
-
-class WebsiteUser(HttpUser):
-
-    tasks = {UserBehavior:1}
-    wait_time = constant(0)
-    
+class HelloWorldUser(HttpUser):
+    @task
+    def hello_world(self):
+        self.client.get("/hello")
+        self.client.get("/world")
