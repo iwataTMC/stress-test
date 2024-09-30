@@ -162,3 +162,7 @@ cython_debug/
 reqtestlocust/
 
 .DS_Store
+
+.idea/
+
+test/
